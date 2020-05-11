@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="{{ metadata.scripts | safe }}"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    </header>
+
+    {{ content }}
+
+  </body>
+</html>
+

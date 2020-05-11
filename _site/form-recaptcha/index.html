@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src=""></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/"></a></h1>
+    </header>
+
+    &lt;p&gt;Test form with reCAPTCHA&lt;/p&gt;
+&lt;h2&gt;Form below&lt;/h2&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var onloadCallback = function() {
+    grecaptcha.render(&#39;html_element&#39;, {sitekey: &#39;6LdX5vUUAAAAAHJjEk5p1PIYZMJmy98zZW8y_Ncx&#39;});
+  };
+&lt;/script&gt;
+&lt;form
+  method=&quot;POST&quot;
+  name=&quot;fa-form-1&quot;
+  action=&quot;https://webhook.frontapp.com/forms/front/E4TKHgjDQY6gUDCVjUi53tviG53GRly6fx5rVq299RSdnSJUqAPONYR61MwrOtsgZsigf9FUE_kcpF5B8wHUu8MT1CzUI4T2Iw&quot;
+  enctype=&quot;multipart/form-data&quot;
+  accept-charset=&quot;utf-8&quot;
+&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;textarea name=&quot;body&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type=&quot;file&quot; name=&quot;attachment&quot;&gt;
+  &lt;/div&gt;
+   &lt;div id=&quot;html_element&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+  &lt;/div&gt;
+&lt;script src=&quot;https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&quot; async defer&gt;&lt;/script&gt;
+&lt;/form&gt;
+
+  </body>
+</html>
+
