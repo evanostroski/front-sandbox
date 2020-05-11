@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Form page with recaptcha</title>
-    <script src=""></script>
-  </head>
-  <body>
-    <h1>Form page with recaptcha</h1>
-    <p>Test description</p>
-
-    <script type="text/javascript">
+---
+title: Form page with recaptcha
+description: Test description
+layout: layouts/base.njk
+---
+<script type="text/javascript">
 var onloadCallback = function() {
 grecaptcha.render('html_element', {sitekey: '6LdX5vUUAAAAAHJjEk5p1PIYZMJmy98zZW8y_Ncx'});
 };
@@ -46,7 +41,3 @@ accept-charset="utf-8"
 </form>
 </body>
 </html>
-
-  </body>
-</html>
-
