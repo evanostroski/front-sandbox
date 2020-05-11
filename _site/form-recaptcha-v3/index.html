@@ -1,9 +1,14 @@
----
-title: Form page with recaptcha
-description: Test description
-layout: layouts/base.njk
----
-<script type="text/javascript">
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Form page with recaptcha v3</title>
+    <script src=""></script>
+  </head>
+  <body>
+    <h1>Form page with recaptcha v3</h1>
+    <p>Form page with recaptcha v3</p>
+
+    <script type="text/javascript">
 var onloadCallback = function() {
 grecaptcha.render('html_element', {sitekey: '6LdX5vUUAAAAAHJjEk5p1PIYZMJmy98zZW8y_Ncx'});
 };
@@ -39,5 +44,6 @@ accept-charset="utf-8"
   </div>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </form>
-</body>
+  </body>
 </html>
+
