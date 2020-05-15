@@ -3,4 +3,7 @@ module.exports = function(eleventyConfig) {
   
     // Copy `img/` to `_site/img`
     eleventyConfig.addPassthroughCopy("img");
+
+    // Copy `css/` to `_site/css`
+    eleventyConfig.addPassthroughCopy("css");
   };
