@@ -1,0 +1,42 @@
+---
+title: Form page with recaptcha v2
+description: Form page with recaptcha v2
+layout: layouts/base.njk
+tags: pages
+---
+<script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('html_element', {sitekey: '6Le18fUUAAAAAAlrJc_b44QLFjPFDmK59CuWhFFF'});
+  };
+</script>
+<form
+  method="POST"
+  name="fa-form-1"
+  action="https://webhook.frontapp.com/forms/front/InVslqYPqywr50N6kaDVNd9knltlPlKGFfAC-fFaw7z1LDKX2dtvnSULh8OTFjpsPa323MLClJRFPnJPMXZvb3qecPMg7gDpAw"
+  enctype="multipart/form-data"
+  accept-charset="utf-8"
+>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email">
+  </div>
+
+  <div>
+    <textarea name="body"></textarea>
+  </div>
+
+  <div>
+    <input type="file" name="attachment">
+  </div>
+
+   <div id="html_element"></div>
+  <div>
+    <input type="submit" value="Send">
+  </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+</form>

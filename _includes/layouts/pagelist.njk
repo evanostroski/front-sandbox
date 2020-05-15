@@ -1,0 +1,8 @@
+  
+<ul>
+{% for page in pagelist %}
+  <li>
+    <a href="{{ page.url | url }}">{% if page.data.title %}{{ page.data.title }}{% else %}<code>{{ page.url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>
