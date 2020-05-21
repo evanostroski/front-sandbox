@@ -17,7 +17,10 @@
   "scripts": {
     "build": "run-s prod:*",
     "prod:eleventy": "eleventy",
-    "prod:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets"
+    "prod:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets",
+    "local": "run-s local:*",
+    "local:eleventy": "eleventy --pathprefix=/Evan/Documents/Development/Front/sandbox-site/_site",
+    "local:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets"
   },
   "repository": {
     "type": "git",
