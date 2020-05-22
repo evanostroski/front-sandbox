@@ -8,4 +8,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
 
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
+  eleventyConfig.addLayoutAlias('form', 'layouts/form.njk');
+  eleventyConfig.addLayoutAlias('chat', 'layouts/chat.njk');
 };

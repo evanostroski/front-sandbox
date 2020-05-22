@@ -2,7 +2,7 @@
 title: Sandbox for sand fox
 layout: default
 ---
-<div class="container-fluid fox">
+<div class="container-fluid">
     <div class="row justify-content-start">
         <div class="col-md-7 py-3">
             <img class="img-fluid rounded mr-2 float-left" src="{{site.img | url}}fennec.png">
@@ -22,7 +22,15 @@ layout: default
     </div>
 </div>
 <hr>
-<p>
-{% set pagelist = collections.pages %}
-{% include "pagelist.njk" %}
-</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mx-3 p-3 border border-dark rounded-lg">
+            {% set formlist = collections.forms %}
+            {% include "formlist.njk" %}
+        </div>
+        <div class="col-md-5 mx-3 p-3 border border-dark rounded-lg">
+            {% set chatlist = collections.chats %}
+            {% include "chatlist.njk" %}
+        </div>
+    </div>
+</div>

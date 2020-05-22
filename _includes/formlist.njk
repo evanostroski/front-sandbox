@@ -1,0 +1,10 @@
+<h5>Front forms</h5>
+<p>
+<ul>
+{% for form in formlist %}
+  <li>
+    <a href="{{ form.url | url }}index.html">{% if form.data.title %}{{ form.data.title }}{% else %}<code>{{ form.url | url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>
+</p>

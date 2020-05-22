@@ -1,0 +1,10 @@
+<h5>Front chats</h5>
+<p>
+<ul>
+{% for chat in chatlist %}
+  <li>
+    <a href="{{ chat.url | url }}index.html">{% if chat.data.title %}{{ chat.data.title }}{% else %}<code>{{ chat.url | url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>
+</p>
