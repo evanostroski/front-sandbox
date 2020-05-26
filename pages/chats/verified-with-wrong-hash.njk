@@ -1,0 +1,16 @@
+---
+title: Chat with verified users only, wrong hash provided
+description: This chat widget is configured to only permit chats when an identified userHash is provided.  In this case, the wrong hash is provided.
+layout: chat
+tags: chats
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: 'c96a4f103123656ef521913979693b0c', 
+    useDefaultLauncher: true,
+    email: 'support@frontapp.com',
+    userHash: 'this is not correct'
+    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+</script>
