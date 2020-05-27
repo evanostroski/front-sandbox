@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-        <title>Evan&#39;s Front Sandbox - Chat with verified users only, hash provided</title>
+        <title>Evan&#39;s Front Sandbox - Basic chat with hide and show</title>
     
     
-        <meta name="description" content="This chat widget is configured to only permit chats when an identified userHash is provided">
+        <meta name="description" content="Basic chat functionality with buttons to demonstrate &quot;hide&quot; and &quot;show&quot; methods">
     
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -20,7 +20,7 @@
     </div>
     <div class="row px-5">
         
-            <h4>This chat widget is configured to only permit chats when an identified userHash is provided</h4>
+            <h4>Basic chat functionality with buttons to demonstrate &quot;hide&quot; and &quot;show&quot; methods</h4>
         
     </div>
     <hr>
@@ -48,15 +48,21 @@
             </p>
         </div>
         <div class="col-md-5 p-3">
-            <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+            <button onclick="chatShow()">Show chat</button>
+<button onclick="chatHide()">Hide chat</button>
+
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
-  window.FrontChat('init', {
-    chatId: 'c96a4f103123656ef521913979693b0c', 
-    useDefaultLauncher: true,
-    email: 'support@frontapp.com',
-    userHash: 'b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455'
-    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
-  });
+  window.FrontChat('init', {chatId: 'a019c83ab77a570c49500301e65d1297', useDefaultLauncher: true});
+</script>
+
+<script>
+function chatShow() {
+    window.FrontChat('show');
+}
+function chatHide() {
+    window.FrontChat('hide');
+}
 </script>      
         </div>
     </div>
@@ -70,15 +76,21 @@
     </div>
     <div class="row px-3 py-2">
         <pre class="pre-scrollable text-light bg-dark m-3 p-3">
+&lt;button onclick=&quot;chatShow()&quot;&gt;Show chat&lt;/button&gt;
+&lt;button onclick=&quot;chatHide()&quot;&gt;Hide chat&lt;/button&gt;
+
 &lt;script src=&quot;https://chat-assets.frontapp.com/v1/chat.bundle.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
-  window.FrontChat(&#39;init&#39;, {
-    chatId: &#39;c96a4f103123656ef521913979693b0c&#39;, 
-    useDefaultLauncher: true,
-    email: &#39;support@frontapp.com&#39;,
-    userHash: &#39;b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455&#39;
-    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
-  });
+  window.FrontChat(&#39;init&#39;, {chatId: &#39;a019c83ab77a570c49500301e65d1297&#39;, useDefaultLauncher: true});
+&lt;/script&gt;
+
+&lt;script&gt;
+function chatShow() {
+    window.FrontChat(&#39;show&#39;);
+}
+function chatHide() {
+    window.FrontChat(&#39;hide&#39;);
+}
 &lt;/script&gt;
         </pre>
     </div>
