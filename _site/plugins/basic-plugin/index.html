@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="//dl.frontapp.com/libs/plugin-sdk-1.0.1.min.js"></script>
+  </head>
+  <body>
+    
+        <h4>Console.log(context.conversation)</h4>
+    
+    <script type="text/javascript">
+        Front.contextUpdates.subscribe(context => {
+  switch(context.type) {
+    case 'noConversation':
+      console.log('No conversation selected');
+      break;
+    case 'singleConversation':
+      console.log('Selected conversation:', context.conversation);
+      break;
+    case 'multiConversations':
+      console.log('Multiple conversations selected', context.conversations);
+      break;
+    default:
+      console.error(`Unsupported context type: ${context.type}`);
+      break;
+  }
+});
+    </script>
+  </body>
+</html>

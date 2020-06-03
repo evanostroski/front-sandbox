@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <script type="text/javascript" src="//dl.frontapp.com/libs/plugin-sdk-1.0.1.min.js"></script>
+  </head>
+  <body>
+    {% if description %}
+        <h4>{{ description }}</h4>
+    {% endif %}
+    <script type="text/javascript">
+        {{ content | safe }}
+    </script>
+  </body>
+</html>
