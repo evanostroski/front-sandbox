@@ -1,0 +1,3 @@
+[submodule "_plugins/sandbox-plugin"]
+	path = _plugins/sandbox-plugin
+	url = https://github.com/evanostroski/sandbox-plugin.git
