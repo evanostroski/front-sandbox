@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
+{% include "partials/breadcrumb.njk" %}
+
 <div class="container-fluid fox">
     <div class="row px-3 py-2">
-        <h4 class="display-4">This page is used to demonstrate Front chat</h4>
+        <h4 class="display-4">Front Chat</h4>
     </div>
     <div class="row px-5">
         {% if description %}
@@ -41,6 +43,6 @@ layout: default
     <hr>
     <div class="row p-3">
         {% set code = content %}
-        {% include "layouts/withcode.njk" %}
+        {% include "partials/withcode.njk" %}
     </div>
 </div>
