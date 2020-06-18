@@ -1,0 +1,36 @@
+---
+title: Form page with styling
+description: Form page with inline styling on form elements
+layout: form
+tags: forms
+---
+<form
+  method="POST"
+  name="fa-form-1"
+  action="https://webhook.frontapp.com/forms/front/oE4TwFSqUUbuYIyjlqAw5ZGcKPsbZw8oaA7LJlKGsVvC5MMYIPd2G8BVBf67DhOQexv_mbBh_NNdM3YfWCptBPnK4j-dk4Pc6A"
+  enctype="multipart/form-data"
+  accept-charset="utf-8"
+>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" style="transform: rotate(-1.5deg);">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" style="background: grey;">
+  </div>
+
+  <div>
+    <textarea name="body" style="border:5px solid #333;border-radius: 5px;"></textarea>
+  </div>
+
+  <div>
+    <input type="file" name="attachment">
+  </div>
+
+   <div id="html_element"></div>
+  <div>
+    <input type="submit" value="Send" style="font: 1.4em/1.5em 'handwriting', cursive, sans-serif;">
+  </div>
+</form>

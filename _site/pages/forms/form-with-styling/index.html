@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-        <title>Evan&#39;s Front Sandbox - Form page with recaptcha v2</title>
+        <title>Evan&#39;s Front Sandbox - Form page with styling</title>
     
     
-        <meta name="description" content="Form page with recaptcha enabled with a v2 key.  This is currently supported by Front Forms.">
+        <meta name="description" content="Form page with inline styling on form elements">
     
     <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body class="fox">
 <div class="container-fluid">
     <div class="row p-1">
-        <a href="/.">Home</a>&nbsp;| Form page with recaptcha v2
+        <a href="/.">Home</a>&nbsp;| Form page with styling
     </div>
 </div>
 
@@ -25,7 +25,7 @@
     </div>
     <div class="row px-5">
         
-            <h4>Form page with recaptcha enabled with a v2 key.  This is currently supported by Front Forms.</h4>
+            <h4>Form page with inline styling on form elements</h4>
         
     </div>
     <hr>
@@ -39,34 +39,25 @@
             </p>
         </div>
         <div class="col-md-5 m-3 p-3">
-            <script type="text/javascript">
-  var onloadCallback = function() {
-    grecaptcha.render('html_element', {sitekey: '6Le18fUUAAAAAAlrJc_b44QLFjPFDmK59CuWhFFF'});
-  };
-</script>
-<form
+            <form
   method="POST"
   name="fa-form-1"
-  action="https://webhook.frontapp.com/forms/front/InVslqYPqywr50N6kaDVNd9knltlPlKGFfAC-fFaw7z1LDKX2dtvnSULh8OTFjpsPa323MLClJRFPnJPMXZvb3qecPMg7gDpAw"
+  action="https://webhook.frontapp.com/forms/front/oE4TwFSqUUbuYIyjlqAw5ZGcKPsbZw8oaA7LJlKGsVvC5MMYIPd2G8BVBf67DhOQexv_mbBh_NNdM3YfWCptBPnK4j-dk4Pc6A"
   enctype="multipart/form-data"
   accept-charset="utf-8"
 >
   <div>
     <label for="name">Name</label>
-    <input type="text" name="name">
+    <input type="text" name="name" style="transform: rotate(-1.5deg);">
   </div>
 
   <div>
     <label for="email">Email</label>
-    <input type="email" name="email">
+    <input type="email" name="email" style="background: grey;">
   </div>
 
   <div>
-    <textarea name="differentbodyname"></textarea>
-  </div>
-
-  <div>
-    <input type="hidden" name="body" value="ignore"></input>
+    <textarea name="body" style="border:5px solid #333;border-radius: 5px;"></textarea>
   </div>
 
   <div>
@@ -75,9 +66,8 @@
 
    <div id="html_element"></div>
   <div>
-    <input type="submit" value="Send">
+    <input type="submit" value="Send" style="font: 1.4em/1.5em 'handwriting', cursive, sans-serif;">
   </div>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </form>
         </div>
     </div>
@@ -91,34 +81,25 @@
     </div>
     <div class="row px-3 py-2">
         <pre class="pre-scrollable text-light bg-dark m-3 p-3">
-&lt;script type=&quot;text/javascript&quot;&gt;
-  var onloadCallback = function() {
-    grecaptcha.render(&#39;html_element&#39;, {sitekey: &#39;6Le18fUUAAAAAAlrJc_b44QLFjPFDmK59CuWhFFF&#39;});
-  };
-&lt;/script&gt;
 &lt;form
   method=&quot;POST&quot;
   name=&quot;fa-form-1&quot;
-  action=&quot;https://webhook.frontapp.com/forms/front/InVslqYPqywr50N6kaDVNd9knltlPlKGFfAC-fFaw7z1LDKX2dtvnSULh8OTFjpsPa323MLClJRFPnJPMXZvb3qecPMg7gDpAw&quot;
+  action=&quot;https://webhook.frontapp.com/forms/front/oE4TwFSqUUbuYIyjlqAw5ZGcKPsbZw8oaA7LJlKGsVvC5MMYIPd2G8BVBf67DhOQexv_mbBh_NNdM3YfWCptBPnK4j-dk4Pc6A&quot;
   enctype=&quot;multipart/form-data&quot;
   accept-charset=&quot;utf-8&quot;
 &gt;
   &lt;div&gt;
     &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; style=&quot;transform: rotate(-1.5deg);&quot;&gt;
   &lt;/div&gt;
 
   &lt;div&gt;
     &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
-    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; style=&quot;background: grey;&quot;&gt;
   &lt;/div&gt;
 
   &lt;div&gt;
-    &lt;textarea name=&quot;differentbodyname&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;input type=&quot;hidden&quot; name=&quot;body&quot; value=&quot;ignore&quot;&gt;&lt;/input&gt;
+    &lt;textarea name=&quot;body&quot; style=&quot;border:5px solid #333;border-radius: 5px;&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 
   &lt;div&gt;
@@ -127,9 +108,8 @@
 
    &lt;div id=&quot;html_element&quot;&gt;&lt;/div&gt;
   &lt;div&gt;
-    &lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Send&quot; style=&quot;font: 1.4em/1.5em &#39;handwriting&#39;, cursive, sans-serif;&quot;&gt;
   &lt;/div&gt;
-&lt;script src=&quot;https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&quot; async defer&gt;&lt;/script&gt;
 &lt;/form&gt;
         </pre>
     </div>
