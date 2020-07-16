@@ -1,0 +1,10 @@
+<h5>Intercom chat</h5>
+<p>
+<ul>
+{% for intercom in intercomlist %}
+  <li>
+    <a href="{{ intercom.url | url }}index.html">{% if intercom.data.title %}{{ intercom.data.title }}{% else %}<code>{{ intercom.url | url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>
+</p>

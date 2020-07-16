@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% include "partials/breadcrumb.njk" %}
+
+<div class="container-fluid fox">
+    <div class="row px-3 py-2">
+        <h4 class="display-4">Front Intercom channel</h4>
+    </div>
+    <div class="row px-5">
+        {% if description %}
+            <h4>{{ description }}</h4>
+        {% endif %}
+    </div>
+    <hr>
+    <div class="row my-3">
+        <div class="col-md-5 m-3 p-3 rounded-lg sand">
+            <h4>Help Center links:</h4>
+            <p>
+                <ul>
+                    <li><a href="https://help.frontapp.com/t/k9244n/how-to-set-up-an-intercom-inbox-in-front">
+                        How to set up an Intercom inbox in Front
+                    </a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-md-5 p-3">
+            {{ content | safe }}      
+        </div>
+    </div>
+    <hr>
+    <div class="row p-3">
+        {% set code = content %}
+        {% include "partials/withcode.njk" %}
+    </div>
+</div>

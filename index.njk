@@ -33,4 +33,10 @@ layout: default
             {% include "chatlist.njk" %}
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-md-5 m-3 p-3 sand rounded-lg">
+            {% set intercomlist = collections.intercom %}
+            {% include "intercomlist.njk" %}
+        </div>
+    </div>
 </div>

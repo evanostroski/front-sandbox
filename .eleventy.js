@@ -10,5 +10,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
   eleventyConfig.addLayoutAlias('form', 'layouts/form.njk');
   eleventyConfig.addLayoutAlias('chat', 'layouts/chat.njk');
-  eleventyConfig.addLayoutAlias('plugin', 'layouts/plugin.njk')
+  eleventyConfig.addLayoutAlias('plugin', 'layouts/plugin.njk');
+  eleventyConfig.addLayoutAlias('intercom', 'layouts/intercom.njk');
 };
