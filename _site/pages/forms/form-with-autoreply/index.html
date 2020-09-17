@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>Evan&#39;s Front Sandbox - Form page with auto-reply</title>
+    
+    
+        <meta name="description" content="Form page with auto-reply email configured">
+    
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body class="fox">
+<div class="container-fluid">
+    <div class="row p-1">
+        <a href="/.">Home</a>&nbsp;| Form page with auto-reply
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row px-3 py-2">
+        <h4 class="display-4">Front Forms</h4>
+    </div>
+    <div class="row px-5">
+        
+            <h4>Form page with auto-reply email configured</h4>
+        
+    </div>
+    <hr>
+    <div class="row my-3 p-3 justify-content-left">
+        <div class="col-md-5 px-4 py-2 rounded-lg sand">
+            <h4>Help Center links:</h4>
+            <p>
+                <ul>
+                    <li><a href="https://help.frontapp.com/t/h429xa/how-to-set-up-a-form-inbox-in-front">How to set up a form inbox in Front</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-md-5 m-3 p-3">
+            <form
+  method="POST"
+  name="fa-form-1"
+  action="https://webhook.frontapp.com/forms/front/1gckSx5gCW8O35GQzlXPY3Wtweu26PWAPGXQQ5MSGBLY_-Qm2rk5yhT4jXcXNS601CHTy2IHYlosK4e607lu-laIbgpcYoHWMQ"
+  enctype="multipart/form-data"
+  accept-charset="utf-8"
+>
+<div>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email">
+  </div>
+
+  <div>
+    <textarea name="body"></textarea>
+  </div>
+
+   <div id="html_element"></div>
+  <div>
+    <input type="submit" value="Send">
+  </div>
+    <input type="hidden" name="autoreply-from" value="evan@frontapp.com">
+    <input type="hidden" name="autoreply-sender-name" value="Evan autoreply form">
+</form>
+        </div>
+    </div>
+    <hr>
+    <div class="row p-3">
+        
+        
+<div class="container-fluid">
+    <div class="row py-2">
+        <h3>Code used on this page:</h3>
+    </div>
+    <div class="row px-3 py-2">
+        <pre class="pre-scrollable text-light bg-dark m-3 p-3">
+&lt;form
+  method=&quot;POST&quot;
+  name=&quot;fa-form-1&quot;
+  action=&quot;https://webhook.frontapp.com/forms/front/1gckSx5gCW8O35GQzlXPY3Wtweu26PWAPGXQQ5MSGBLY_-Qm2rk5yhT4jXcXNS601CHTy2IHYlosK4e607lu-laIbgpcYoHWMQ&quot;
+  enctype=&quot;multipart/form-data&quot;
+  accept-charset=&quot;utf-8&quot;
+&gt;
+&lt;div&gt;
+    &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;textarea name=&quot;body&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+   &lt;div id=&quot;html_element&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+  &lt;/div&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;autoreply-from&quot; value=&quot;evan@frontapp.com&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;autoreply-sender-name&quot; value=&quot;Evan autoreply form&quot;&gt;
+&lt;/form&gt;
+        </pre>
+    </div>
+</div>
+    </div>
+</div>
+
+
+
+
+
+<script src="./assets/main.js"></script>
+</body>
+</html>
+

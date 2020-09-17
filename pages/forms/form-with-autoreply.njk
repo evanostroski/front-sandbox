@@ -1,0 +1,34 @@
+---
+title: Form page with auto-reply
+description: Form page with auto-reply email configured
+layout: form
+tags: forms
+---
+<form
+  method="POST"
+  name="fa-form-1"
+  action="https://webhook.frontapp.com/forms/front/1gckSx5gCW8O35GQzlXPY3Wtweu26PWAPGXQQ5MSGBLY_-Qm2rk5yhT4jXcXNS601CHTy2IHYlosK4e607lu-laIbgpcYoHWMQ"
+  enctype="multipart/form-data"
+  accept-charset="utf-8"
+>
+<div>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email">
+  </div>
+
+  <div>
+    <textarea name="body"></textarea>
+  </div>
+
+   <div id="html_element"></div>
+  <div>
+    <input type="submit" value="Send">
+  </div>
+    <input type="hidden" name="autoreply-from" value="evan@frontapp.com">
+    <input type="hidden" name="autoreply-sender-name" value="Evan autoreply form">
+</form>
