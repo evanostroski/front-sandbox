@@ -1,0 +1,40 @@
+---
+title: Form page with extra textarea
+description: Form page with an extra textarea input to test formatting
+layout: form
+tags: forms
+---
+<form
+  method="POST"
+  name="fa-form-1"
+  action="https://webhook.frontapp.com/forms/front/0wXb91wxlZttFBhnpQuE0lOiDqtnmTeKfbkpKG2Qidw04vpGnvXnF2jb98AYMQRMwySD63jvIDqMu9LAoTcTpJ9cbZ37tQ1inw"
+  enctype="multipart/form-data"
+  accept-charset="utf-8"
+>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email">
+  </div>
+
+  <div>
+    <textarea name="body"></textarea>
+  </div>
+
+  <div>
+    <textarea name="extra"></textarea>
+  </div>
+
+  <div>
+    <input type="file" name="attachment">
+  </div>
+
+   <div id="html_element"></div>
+  <div>
+    <input type="submit" value="Send">
+  </div>
+</form>
