@@ -1,0 +1,16 @@
+---
+title: Basic chat with show on load
+description: Basic chat functionality with buttons to demonstrate "show" on load of page using the Chat API.
+layout: chat
+tags: chats
+date: 2020-11-09
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js" onload="initFrontChat()" async></script>
+<script>
+  function initFrontChat() {
+    window.FrontChat('init', {chatId: 'a019c83ab77a570c49500301e65d1297', useDefaultLauncher: true});
+    setTimeout(function(){
+      window.FrontChat('show');
+    }, 1000);
+  };
+</script>
