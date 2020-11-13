@@ -1,0 +1,22 @@
+---
+layout: plugin
+description: Console.log(context.conversation)
+---
+Front.contextUpdates.subscribe(context => {
+  switch(context.type) {
+    case 'noConversation':
+      console.log('No conversation selected');
+      break;
+    case 'singleConversation':
+      context.listMessages().then(success => {
+        console.log('messages:', success.results);
+      });
+      break;
+    case 'multiConversations':
+      console.log('Multiple conversations selected', context.conversations);
+      break;
+    default:
+      console.error(`Unsupported context type: ${context.type}`);
+      break;
+  }
+});
