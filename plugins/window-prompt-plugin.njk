@@ -1,0 +1,20 @@
+---
+layout: plugin
+description: Test window.prompt()
+---
+Front.contextUpdates.subscribe(context => {
+  switch(context.type) {
+    case 'noConversation':
+      console.log('No conversation selected');
+      break;
+    case 'singleConversation':
+      window.prompt('Conversation id', context.conversation.id);
+      break;
+    case 'multiConversations':
+      console.log('Multiple conversations selected', context.conversations);
+      break;
+    default:
+      console.error(`Unsupported context type: ${context.type}`);
+      break;
+  }
+});
