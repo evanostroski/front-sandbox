@@ -1,0 +1,16 @@
+---
+title: Chat with verified 'username'.
+description: This example shows how to use a 'username' (eg. fakeusername) with verified chat.  The @webchat allows the chat conversation to be associated with an alternate / secondary email handle for a Front contact.
+layout: chat
+tags: chats
+date: 2020-05-26
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+      chatId: 'a019c83ab77a570c49500301e65d1297', 
+      useDefaultLauncher: true,
+      email: 'fakeusername@webchat',
+      userHash: 'e2eb1aed874b4e282897d9266bc2f61272be8360d09ddd8674b5193a970b77e7'});
+      // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+</script>
