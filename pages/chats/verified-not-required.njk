@@ -1,0 +1,17 @@
+---
+title: Chat with verified user, not required
+description: This chat widget is configured to permit chats with or without an identified userHash.  A pre-calculated hash is provided for the given email.
+layout: chat
+tags: chats
+date: 2021-02-19
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: '01473e148b626bb7fc96a17fc0be02bd', 
+    useDefaultLauncher: true,
+    email: 'support@frontapp.com',
+    userHash: '80a77cbc5e91a30abbe26c0649753eea4b17e7958e9d45eeba11556584e95fe6'
+    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+</script>
