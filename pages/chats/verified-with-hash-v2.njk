@@ -1,0 +1,17 @@
+---
+title: Chat with verified users only, hash provided v2
+description: This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email.  Used to test providing a different transcript email than authenticated.
+layout: chat
+tags: chats
+date: 2020-05-26
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: 'c96a4f103123656ef521913979693b0c', 
+    useDefaultLauncher: true,
+    email: 'support+different@frontapp.com',
+    userHash: 'b4036768b44e0d0726da0e5b24d122172d09f3c5a9dbfe9d09c3737bbd9a6f2a'
+    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+</script>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>Evan&#39;s Front Sandbox - Chat with verified users only, hash provided v2</title>
+    
+    
+        <meta name="description" content="This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email.  Used to test providing a different transcript email than authenticated.">
+    
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body class="fox">
+<div class="container-fluid">
+    <div class="row p-1">
+        <a href="/.">Home</a>&nbsp;| Chat with verified users only, hash provided v2
+    </div>
+</div>
+
+<div class="container-fluid fox">
+    <div class="row px-3 py-2">
+        <h4 class="display-4">Front Chat</h4>
+    </div>
+    <div class="row px-5">
+        
+            <h4>This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email.  Used to test providing a different transcript email than authenticated.</h4>
+        
+    </div>
+    <hr>
+    <div class="row my-3">
+        <div class="col-md-5 m-3 p-3 rounded-lg sand">
+            <h4>Help Center links:</h4>
+            <p>
+                <ul>
+                    <li><a href="https://dev.frontapp.com/docs/chat-overview">
+                        Front Chat Widget developer documentation
+                    </a></li>
+                    <li><a href="https://help.frontapp.com/t/x129aq/how-to-set-up-a-front-chat-inbox-in-front">
+                        How to set up a Front Chat inbox in Front
+                    </a></li>
+                    <li><a href="https://help.frontapp.com/t/80290v/using-front-chat">
+                        Using Front Chat
+                    </a></li>
+                    <li><a href="https://help.frontapp.com/t/y72vr5/recognize-logged-in-users-with-front-chat-identity-verification">
+                        Recognize logged in users with Front Chat identity verification
+                    </a></li>
+                    <li><a href="https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification">
+                        userHash algorithm
+                    </a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-md-5 p-3">
+            <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: 'c96a4f103123656ef521913979693b0c', 
+    useDefaultLauncher: true,
+    email: 'support+different@frontapp.com',
+    userHash: 'b4036768b44e0d0726da0e5b24d122172d09f3c5a9dbfe9d09c3737bbd9a6f2a'
+    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+</script>      
+        </div>
+    </div>
+    <hr>
+    <div class="row p-3">
+        
+        
+<div class="container-fluid">
+    <div class="row py-2">
+        <h3>Code used on this page:</h3>
+    </div>
+    <div class="row px-3 py-2">
+        <pre class="pre-scrollable text-light bg-dark m-3 p-3">
+&lt;script src=&quot;https://chat-assets.frontapp.com/v1/chat.bundle.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.FrontChat(&#39;init&#39;, {
+    chatId: &#39;c96a4f103123656ef521913979693b0c&#39;, 
+    useDefaultLauncher: true,
+    email: &#39;support+different@frontapp.com&#39;,
+    userHash: &#39;b4036768b44e0d0726da0e5b24d122172d09f3c5a9dbfe9d09c3737bbd9a6f2a&#39;
+    // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+&lt;/script&gt;
+        </pre>
+    </div>
+</div>
+    </div>
+</div>
+<script src="./assets/main.js"></script>
+</body>
+</html>
+
