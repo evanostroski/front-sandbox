@@ -1,0 +1,23 @@
+---
+title: Chat with anonymous first, then identified
+description: This chat widget is configured to permit chats with or without an identified userHash.  A pre-calculated hash is provided for the given email.  It first starts chat with an anonymous visitor through the 'init' method, and then a verified visitor by calling 'identity' after 11 seconds.
+layout: chat
+tags: chats
+date: 2021-04-26
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: '01473e148b626bb7fc96a17fc0be02bd', 
+    useDefaultLauncher: true
+  });
+
+  setTimeout(function(){ 
+    alert("Calling 'identity'");
+    window.FrontChat('identity', {
+        email: 'support@frontapp.com',
+        userHash: '80a77cbc5e91a30abbe26c0649753eea4b17e7958e9d45eeba11556584e95fe6'
+        // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+      })
+  }, 11000);
+</script>
