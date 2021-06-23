@@ -1,0 +1,14 @@
+---
+title: useDefaultLauncher false chat with hide and show
+description: Basic chat functionality with buttons to demonstrate "hide" and "show" methods of the Chat API when initialized with useDefaultLauncher false.
+layout: chat
+tags: chats
+date: 2021-06-23
+---
+<button onclick="window.FrontChat('show')">Show chat</button>
+<button onclick="window.FrontChat('hide')">Hide chat</button>
+
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {chatId: 'a019c83ab77a570c49500301e65d1297', useDefaultLauncher: false});
+</script>
