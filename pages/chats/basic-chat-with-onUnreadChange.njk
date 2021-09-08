@@ -1,0 +1,17 @@
+---
+title: Basic chat with an onUnreadChange handler
+description: Basic chat functionality with an onUnreadChange handler.
+layout: chat
+tags: chats
+date: 2021-09-08
+---
+Unread Counter: <span id="counter">0</span>
+
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {chatId: 'a019c83ab77a570c49500301e65d1297', useDefaultLauncher: true});
+  window.FrontChat('onUnreadChange', function (event) {
+    let counter = document.getElementById('counter');
+    counter.innerHTML = event.unread_count;
+  });  
+</script>
