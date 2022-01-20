@@ -1,12 +1,11 @@
 ---
 title: Chat with custom field and update
-description: This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field soup.
+description: This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field 'number'.
 layout: chat
 tags: chats
 date: 2022-01-20
 ---
-<button onclick="window.FrontChat('identity', {customFields: {soup: 'tomato'}})">Tomato</button>
-<button onclick="window.FrontChat('identity', {customFields: {soup: 'avgolemono'}})">Avgolemono</button>
+<button onclick="window.FrontChat('identity', {customFields: {number: 22}})">Set Number to 22</button>
 <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {
@@ -16,7 +15,7 @@ date: 2022-01-20
     userHash: 'b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455',
     // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
     customFields: {
-        soup: 'avgolemono'
+        number: 11
     }
   });
 </script>

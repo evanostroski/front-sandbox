@@ -8,7 +8,7 @@
         <title>Evan&#39;s Front Sandbox - Chat with custom field and update</title>
     
     
-        <meta name="description" content="This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field soup.">
+        <meta name="description" content="This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field &#39;number&#39;.">
     
     <link rel="stylesheet" href="/assets/main.css">
 </head>
@@ -25,7 +25,7 @@
     </div>
     <div class="row px-5">
         
-            <h4>This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field soup.</h4>
+            <h4>This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field &#39;number&#39;.</h4>
         
     </div>
     <hr>
@@ -53,8 +53,7 @@
             </p>
         </div>
         <div class="col-md-5 p-3">
-            <button onclick="window.FrontChat('identity', {customFields: {soup: 'tomato'}})">Tomato</button>
-<button onclick="window.FrontChat('identity', {customFields: {soup: 'avgolemono'}})">Avgolemono</button>
+            <button onclick="window.FrontChat('identity', {customFields: {number: 22}})">Set Number to 22</button>
 <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {
@@ -64,7 +63,7 @@
     userHash: 'b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455',
     // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
     customFields: {
-        soup: 'avgolemono'
+        number: 11
     }
   });
 </script>      
@@ -80,8 +79,7 @@
     </div>
     <div class="row px-3 py-2">
         <pre class="pre-scrollable text-light bg-dark m-3 p-3">
-&lt;button onclick=&quot;window.FrontChat(&#39;identity&#39;, {customFields: {soup: &#39;tomato&#39;}})&quot;&gt;Tomato&lt;/button&gt;
-&lt;button onclick=&quot;window.FrontChat(&#39;identity&#39;, {customFields: {soup: &#39;avgolemono&#39;}})&quot;&gt;Avgolemono&lt;/button&gt;
+&lt;button onclick=&quot;window.FrontChat(&#39;identity&#39;, {customFields: {number: 22}})&quot;&gt;Set Number to 22&lt;/button&gt;
 &lt;script src=&quot;https://chat-assets.frontapp.com/v1/chat.bundle.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   window.FrontChat(&#39;init&#39;, {
@@ -91,7 +89,7 @@
     userHash: &#39;b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455&#39;,
     // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
     customFields: {
-        soup: &#39;avgolemono&#39;
+        number: 11
     }
   });
 &lt;/script&gt;
