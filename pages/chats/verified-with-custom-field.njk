@@ -1,11 +1,10 @@
 ---
-title: Chat with custom field and update
-description: This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field 'number'.
+title: Chat with custom field
+description: This chat widget is configured to only permit chats when an identified userHash is provided.  A pre-calculated hash is provided for the given email and a value passed to the custom field Number.
 layout: chat
 tags: chats
 date: 2022-01-20
 ---
-<button onclick="window.FrontChat('identity', {customFields: {number: 22}});">Set Number to 22</button>
 <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {
