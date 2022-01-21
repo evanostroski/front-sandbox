@@ -5,6 +5,7 @@ layout: chat
 tags: chats
 date: 2022-01-20
 ---
+<input type="text" id="number"><button onclick="updateNumber()">Update number</button>
 <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {
@@ -13,8 +14,19 @@ date: 2022-01-20
     email: 'support@frontapp.com',
     userHash: 'b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455',
     customFields: {
-        Number: 11,
-        'Job title': 'Chat bot'
+        Number: 11
     }
   });
+
+  function updateNumber() {
+    const number = document.getElementById("number").value.parseInt();
+    
+    if(number) {
+      window.FrontChat('identity', {
+        customFields: {
+          Number: number
+       }
+      });
+    } 
+  }
 </script>

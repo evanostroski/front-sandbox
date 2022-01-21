@@ -53,7 +53,8 @@
             </p>
         </div>
         <div class="col-md-5 p-3">
-            <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+            <input type="text" id="number"><button onclick="updateNumber()">Update number</button>
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {
     chatId: 'c96a4f103123656ef521913979693b0c', 
@@ -61,10 +62,21 @@
     email: 'support@frontapp.com',
     userHash: 'b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455',
     customFields: {
-        Number: 11,
-        'Job title': 'Chat bot'
+        Number: 11
     }
   });
+
+  function updateNumber() {
+    const number = document.getElementById("number").value.parseInt();
+    
+    if(number) {
+      window.FrontChat('identity', {
+        customFields: {
+          Number: number
+       }
+      });
+    } 
+  }
 </script>      
         </div>
     </div>
@@ -78,6 +90,7 @@
     </div>
     <div class="row px-3 py-2">
         <pre class="pre-scrollable text-light bg-dark m-3 p-3">
+&lt;input type=&quot;text&quot; id=&quot;number&quot;&gt;&lt;button onclick=&quot;updateNumber()&quot;&gt;Update number&lt;/button&gt;
 &lt;script src=&quot;https://chat-assets.frontapp.com/v1/chat.bundle.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   window.FrontChat(&#39;init&#39;, {
@@ -86,10 +99,21 @@
     email: &#39;support@frontapp.com&#39;,
     userHash: &#39;b893b9a4f65ed22d523c6a56123399c0c3565b6f6a25bf2ad28086b643711455&#39;,
     customFields: {
-        Number: 11,
-        &#39;Job title&#39;: &#39;Chat bot&#39;
+        Number: 11
     }
   });
+
+  function updateNumber() {
+    const number = document.getElementById(&quot;number&quot;).value.parseInt();
+    
+    if(number) {
+      window.FrontChat(&#39;identity&#39;, {
+        customFields: {
+          Number: number
+       }
+      });
+    } 
+  }
 &lt;/script&gt;
         </pre>
     </div>
