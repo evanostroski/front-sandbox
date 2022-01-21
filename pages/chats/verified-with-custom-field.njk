@@ -19,7 +19,7 @@ date: 2022-01-20
   });
 
   function updateNumber() {
-    const number = document.getElementById("number").value.parseInt();
+    const number = parseInt(document.getElementById("number").value);
     
     if(number) {
       window.FrontChat('identity', {
