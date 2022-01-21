@@ -67,7 +67,7 @@
   });
 
   function updateNumber() {
-    const number = document.getElementById("number").value.parseInt();
+    const number = parseInt(document.getElementById("number").value);
     
     if(number) {
       window.FrontChat('identity', {
@@ -104,7 +104,7 @@
   });
 
   function updateNumber() {
-    const number = document.getElementById(&quot;number&quot;).value.parseInt();
+    const number = parseInt(document.getElementById(&quot;number&quot;).value);
     
     if(number) {
       window.FrontChat(&#39;identity&#39;, {
