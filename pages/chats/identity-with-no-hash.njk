@@ -1,0 +1,16 @@
+---
+title: Identity call with no hash
+description: This chat widget is configured to permit chats with or without an identified userHash.  An email is provided to an 'identity' call with no userHash.
+layout: chat
+tags: chats
+date: 2022-04-08
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: '01473e148b626bb7fc96a17fc0be02bd', 
+    useDefaultLauncher: true,
+    email: 'support2@frontapp.com',
+    // Front chat identity verification: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+  });
+</script>
