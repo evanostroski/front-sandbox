@@ -1,0 +1,22 @@
+---
+title: Identity with email only (no hash) after init
+description: This chat widget is configured to permit chats with or without an identified userHash.  No hash is provided for the given email.  It first starts chat with an anonymous visitor through the 'init' method, and then a verified visitor by calling 'identity' after 11 seconds.
+layout: chat
+tags: chats
+date: 2022-04-08
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {
+    chatId: '01473e148b626bb7fc96a17fc0be02bd', 
+    useDefaultLauncher: true
+  });
+
+  setTimeout(function(){ 
+    alert("Calling 'identity'");
+    window.FrontChat('identity', {
+        email: 'support2@frontapp.com',
+        // userHash algorithm: https://dev.frontapp.com/docs/chat-sdk-reference#identity-verification
+      })
+  }, 11000);
+</script>
