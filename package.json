@@ -21,8 +21,8 @@
     "prod:eleventy": "eleventy",
     "prod:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets --no-minify",
     "local": "run-s local:*",
-    "local:eleventy": "eleventy --pathprefix=%INIT_CWD%/_site",
-    "local:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets"
+    "local:eleventy": "eleventy --pathprefix=/Ubuntu$PWD/_site",
+    "local:parcel": "parcel build ./_assets/js/main.js --out-dir ./_site/assets --no-minify"
   },
   "repository": {
     "type": "git",
