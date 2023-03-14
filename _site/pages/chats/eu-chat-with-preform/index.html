@@ -53,14 +53,17 @@
             </p>
         </div>
         <div class="col-md-5 p-3">
-            <button onclick="window.FrontChat('shutdown')">Shutdown</button>
-<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+            <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
   window.FrontChat('init', {chatId: '313b16a4ee3b065a1087434ad39653a9', useDefaultLauncher: true});
 </script>      
         </div>
     </div>
     <hr>
+    <div class="row p-3">
+        <button onclick="window.FrontChat('shutdown')">Shutdown</button>
+        <button onclick="window.FrontChat('shutdown', {clearSession: true})">Clear session</button>
+    </div>
     <div class="row p-3">
         
         
@@ -70,7 +73,6 @@
     </div>
     <div class="row px-3 py-2">
         <pre class="pre-scrollable text-light bg-dark m-3 p-3">
-&lt;button onclick=&quot;window.FrontChat(&#39;shutdown&#39;)&quot;&gt;Shutdown&lt;/button&gt;
 &lt;script src=&quot;https://chat-assets.frontapp.com/v1/chat.bundle.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   window.FrontChat(&#39;init&#39;, {chatId: &#39;313b16a4ee3b065a1087434ad39653a9&#39;, useDefaultLauncher: true});
