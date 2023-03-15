@@ -1,0 +1,17 @@
+---
+title: Chat with init button
+description: This example includes an Init button to reload after clearing the session
+layout: chat
+tags: chats
+date: 2023-03-14
+---
+<button onclick="initFrontChat()">Init chat</button>
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js" onload="initFrontChat()" async></script>
+<script>
+  function initFrontChat() {
+    window.FrontChat('init', {chatId: '313b16a4ee3b065a1087434ad39653a9', useDefaultLauncher: true});
+    setTimeout(function(){
+      window.FrontChat('show');
+    }, 1000);
+  };
+</script>
