@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"oQWo":[function(require,module,exports) {
+})({"mYyG":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -11291,7 +11291,7 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-},{"process":"oQWo"}],"CD2u":[function(require,module,exports) {
+},{"process":"mYyG"}],"CD2u":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
