@@ -9,9 +9,14 @@ Unread Counter: <span id="counter">0</span>
 
 <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
 <script>
+  const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
   window.FrontChat('init', {chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', useDefaultLauncher: true});
-  window.FrontChat('onUnreadChange', function (event) {
-    let counter = document.getElementById('counter');
-    counter.innerHTML = event.unread_count;
-  });  
+  const initalizeHandler = async () => {
+    await sleep(1000)
+    window.FrontChat('onUnreadChange', function (event) {
+      let counter = document.getElementById('counter');
+      counter.innerHTML = event.unread_count;
+    });  
+  }
+
 </script>
