@@ -59,14 +59,14 @@
 <script>
   const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
   window.FrontChat('init', {chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', useDefaultLauncher: true});
-  const initalizeHandler = async () => {
+  const registerHandler = async () => {
     await sleep(1000)
     window.FrontChat('onUnreadChange', function (event) {
       let counter = document.getElementById('counter');
       counter.innerHTML = event.unread_count;
     });  
   }
-
+  registerHandler();
 </script>      
         </div>
     </div>
@@ -92,14 +92,14 @@ Unread Counter: &lt;span id=&quot;counter&quot;&gt;0&lt;/span&gt;
 &lt;script&gt;
   const sleep = (delay) =&gt; new Promise((resolve) =&gt; setTimeout(resolve, delay))
   window.FrontChat(&#39;init&#39;, {chatId: &#39;cc6cd1eb09b189fa6a6f8a2c0cd0d63c&#39;, useDefaultLauncher: true});
-  const initalizeHandler = async () =&gt; {
+  const registerHandler = async () =&gt; {
     await sleep(1000)
     window.FrontChat(&#39;onUnreadChange&#39;, function (event) {
       let counter = document.getElementById(&#39;counter&#39;);
       counter.innerHTML = event.unread_count;
     });  
   }
-
+  registerHandler();
 &lt;/script&gt;
         </pre>
     </div>
