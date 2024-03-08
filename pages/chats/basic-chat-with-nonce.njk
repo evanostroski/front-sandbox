@@ -1,0 +1,11 @@
+---
+title: Basic chat with nonce
+description: This example uses the base Front chat widget code with a nonce on the script inside the chat iframe to support Content Security Policy (CSP).
+layout: chat
+tags: chats
+date: 2024-03-08
+---
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {chatId: 'a019c83ab77a570c49500301e65d1297', useDefaultLauncher: true, nonce: 'random-nonce-value'});
+</script>
