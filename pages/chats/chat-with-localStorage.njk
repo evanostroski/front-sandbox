@@ -40,15 +40,6 @@ date: 2024-03-10
   }
   const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
-  const registerHandler = async () => {
-    await sleep(1000)
-    window.FrontChat('onWindowVisibilityChanged', function (event) {
-      let status = event.is_window_visible ? STATUS.INIT_MAXIMIZED : STATUS.INIT_MINIMIZED;
-      localStorage.setItem('chatStatus', status);
-    });  
-  }
-  registerHandler();
-
   function initMaximized() {
     localStorage.setItem('chatStatus', STATUS.INIT_MAXIMIZED);
     window.FrontChat('init', {

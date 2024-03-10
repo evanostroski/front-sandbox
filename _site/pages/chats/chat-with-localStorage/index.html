@@ -88,15 +88,6 @@
   }
   const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
-  const registerHandler = async () => {
-    await sleep(1000)
-    window.FrontChat('onWindowVisibilityChanged', function (event) {
-      let status = event.is_window_visible ? STATUS.INIT_MAXIMIZED : STATUS.INIT_MINIMIZED;
-      localStorage.setItem('chatStatus', status);
-    });  
-  }
-  registerHandler();
-
   function initMaximized() {
     localStorage.setItem('chatStatus', STATUS.INIT_MAXIMIZED);
     window.FrontChat('init', {
@@ -162,15 +153,6 @@
       localStorage.setItem(&#39;chatStatus&#39;, STATUS.NOT_INITIALIZED);
   }
   const sleep = (delay) =&gt; new Promise((resolve) =&gt; setTimeout(resolve, delay))
-
-  const registerHandler = async () =&gt; {
-    await sleep(1000)
-    window.FrontChat(&#39;onWindowVisibilityChanged&#39;, function (event) {
-      let status = event.is_window_visible ? STATUS.INIT_MAXIMIZED : STATUS.INIT_MINIMIZED;
-      localStorage.setItem(&#39;chatStatus&#39;, status);
-    });  
-  }
-  registerHandler();
 
   function initMaximized() {
     localStorage.setItem(&#39;chatStatus&#39;, STATUS.INIT_MAXIMIZED);
