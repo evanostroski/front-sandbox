@@ -1,0 +1,64 @@
+---
+title: Chat with visual state via localStorage
+description: Chat functionality with visual state persisted in localStorage
+layout: chat
+tags: chats
+date: 2024-03-10
+---
+<button onclick="initMaximized()">Init chat Maximimized with localStorage</button>
+<button onclick="shutdown()">Shutdown Chat with localStorage</button>
+
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  const STATUS = {
+    NOT_INITIALIZED: 'NOT_INITIALIZED',
+    INIT_HIDDEN: 'INIT_HIDDEN',
+    INIT_MINIMIZED: 'INIT_MINIMIZED',
+    INIT_MAXIMIZED: 'INIT_MAXIMIZED',
+  }
+
+  let currentStatus = localStorage.getItem('chatStatus') || STATUS.NOT_INITIALIZED;
+  switch (currentStatus) {
+    case STATUS.INIT_MINIMIZED:
+      window.FrontChat('init', {
+        chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', 
+        useDefaultLauncher: true,
+        shouldShowWindowOnLaunch: false});
+      break;
+    case STATUS.INIT_MAXIMIZED:
+      window.FrontChat('init', {
+        chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', 
+        useDefaultLauncher: true,
+        shouldShowWindowOnLaunch: true});
+      break;
+    case STATUS.INIT_HIDDEN:
+      window.FrontChat('init', {chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', useDefaultLauncher: false});
+      break;
+    case STATUS.NOT_INITIALIZED:
+      // Nothing to do except ensure the status is set in localStorage
+      localStorage.setItem('chatStatus', STATUS.NOT_INITIALIZED);
+  }
+  const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+  const registerHandler = async () => {
+    await sleep(1000)
+    window.FrontChat('onWindowVisibilityChanged', function (event) {
+      let status = event.is_window_visible ? STATUS.INIT_MAXIMIZED : STATUS.INIT_MINIMIZED;
+      localStorage.setItem('chatStatus', status);
+    });  
+  }
+  registerHandler();
+
+  function initMaximized() {
+    localStorage.setItem('chatStatus', STATUS.INIT_MAXIMIZED);
+    window.FrontChat('init', {
+      chatId: 'cc6cd1eb09b189fa6a6f8a2c0cd0d63c', 
+      useDefaultLauncher: true,
+      shouldShowWindowOnLaunch: true});
+  }
+
+  function shutdown() {
+    localStorage.setItem('chatStatus', STATUS.NOT_INITIALIZED);
+    window.FrontChat('shutdown');
+  }
+</script>
