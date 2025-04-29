@@ -20,10 +20,10 @@
   "scripts": {
     "build": "run-s prod:*",
     "prod:eleventy": "eleventy",
-    "prod:parcel": "parcel build ./_assets/css/main.scss --dist-dir ./_site/assets/css && parcel build ./_assets/js/main.js --dist-dir ./_site/assets/js",
+    "prod:parcel": "parcel build ./_assets/css/main.scss ./_assets/js/main.js --dist-dir ./_site/assets --no-source-maps",
     "local": "run-s local:*",
     "local:eleventy": "eleventy --pathprefix=/Ubuntu$PWD/_site",
-    "local:parcel": "parcel build ./_assets/css/main.scss --dist-dir ./_site/assets/css && parcel build ./_assets/js/main.js --dist-dir ./_site/assets/js"
+    "local:parcel": "parcel build ./_assets/css/main.scss ./_assets/js/main.js --dist-dir ./_site/assets --no-source-maps"
   },
   "repository": {
     "type": "git",
