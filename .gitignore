@@ -1,3 +1,11 @@
+# Dependencies
 node_modules/
-.cache
-.parcel-cache
+
+# Build output
+_site/
+.cache/
+.parcel-cache/
+
+# Generated files
+*.map
+coverage/

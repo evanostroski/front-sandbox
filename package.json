@@ -2,7 +2,6 @@
   "name": "sandbox-site",
   "version": "1.0.0",
   "description": "Support engineering testing ground and examples for FrontApp.com",
-  "main": ".eleventy.js",
   "dependencies": {
     "@frontapp/plugin-sdk": "^1.0.5",
     "bootstrap": "^4.6.0",
@@ -21,10 +20,10 @@
   "scripts": {
     "build": "run-s prod:*",
     "prod:eleventy": "eleventy",
-    "prod:parcel": "parcel build ./_assets/js/main.js --dist-dir ./_site/assets",
+    "prod:parcel": "parcel build ./_assets/css/main.scss --dist-dir ./_site/assets/css && parcel build ./_assets/js/main.js --dist-dir ./_site/assets/js",
     "local": "run-s local:*",
     "local:eleventy": "eleventy --pathprefix=/Ubuntu$PWD/_site",
-    "local:parcel": "parcel build ./_assets/js/main.js --dist-dir ./_site/assets"
+    "local:parcel": "parcel build ./_assets/css/main.scss --dist-dir ./_site/assets/css && parcel build ./_assets/js/main.js --dist-dir ./_site/assets/js"
   },
   "repository": {
     "type": "git",
