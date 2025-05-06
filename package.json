@@ -4,12 +4,12 @@
   "description": "Support engineering testing ground and examples for FrontApp.com",
   "dependencies": {
     "@frontapp/plugin-sdk": "^1.0.5",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.3.6",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@parcel/transformer-sass": "^2.14.4",
     "cssnano": "^5.1.5",
